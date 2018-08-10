@@ -8,7 +8,7 @@ As we've now seen, it's fairly easy to overfit a model and as such we may need t
 ```python
 import pandas as pd
 import numpy as np
-df = pd.read_csv('Swiss_Healthcare_Premium_Prediction.csv')
+df = pd.read_csv('Swiss_Healthcare_Premium_Prediction.csv.gz', compression='gzip')
 
 df = df.fillna(value=0)
 X = df[df.columns[:-1]]
@@ -41,6 +41,7 @@ df.head()
   <thead>
     <tr style="text-align: right;">
       <th></th>
+      <th>Unnamed: 0</th>
       <th>ID</th>
       <th>CAT_Insurer</th>
       <th>CAT_Region_Num</th>
@@ -50,7 +51,6 @@ df.head()
       <th>212d_V2_PRC</th>
       <th>213d_V2_CUR</th>
       <th>213d_V3_PRC</th>
-      <th>402d_V1_INT</th>
       <th>...</th>
       <th>KG_SPS_226d_V1_CUR</th>
       <th>KG_SPS_227d_V1_PRC</th>
@@ -67,6 +67,7 @@ df.head()
   <tbody>
     <tr>
       <th>0</th>
+      <td>0</td>
       <td>0.000000</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -76,7 +77,6 @@ df.head()
       <td>0.234051</td>
       <td>0.377469</td>
       <td>0.213745</td>
-      <td>0.341908</td>
       <td>...</td>
       <td>0.275441</td>
       <td>0.373868</td>
@@ -91,6 +91,7 @@ df.head()
     </tr>
     <tr>
       <th>1</th>
+      <td>1</td>
       <td>0.000019</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -100,7 +101,6 @@ df.head()
       <td>0.234051</td>
       <td>0.377469</td>
       <td>0.213745</td>
-      <td>0.341908</td>
       <td>...</td>
       <td>0.275441</td>
       <td>0.373868</td>
@@ -115,6 +115,7 @@ df.head()
     </tr>
     <tr>
       <th>2</th>
+      <td>2</td>
       <td>0.000037</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -124,7 +125,6 @@ df.head()
       <td>0.234051</td>
       <td>0.377469</td>
       <td>0.213745</td>
-      <td>0.341908</td>
       <td>...</td>
       <td>0.275441</td>
       <td>0.373868</td>
@@ -139,6 +139,7 @@ df.head()
     </tr>
     <tr>
       <th>3</th>
+      <td>3</td>
       <td>0.000056</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -148,7 +149,6 @@ df.head()
       <td>0.234051</td>
       <td>0.377469</td>
       <td>0.213745</td>
-      <td>0.341908</td>
       <td>...</td>
       <td>0.275441</td>
       <td>0.373868</td>
@@ -163,6 +163,7 @@ df.head()
     </tr>
     <tr>
       <th>4</th>
+      <td>4</td>
       <td>0.000075</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -172,7 +173,6 @@ df.head()
       <td>0.234051</td>
       <td>0.377469</td>
       <td>0.213745</td>
-      <td>0.341908</td>
       <td>...</td>
       <td>0.275441</td>
       <td>0.373868</td>
@@ -187,7 +187,7 @@ df.head()
     </tr>
   </tbody>
 </table>
-<p>5 rows × 195 columns</p>
+<p>5 rows × 196 columns</p>
 </div>
 
 
