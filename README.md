@@ -210,7 +210,7 @@ linreg = LinearRegression()
 ```python
 #Your code here
 from sklearn.linear_model import LinearRegression
-print('The single best predictor was: {}'.format(feat))
+#print('The single best predictor was: {}'.format(feat))
 ```
 
 ## 3. Generalize #2
@@ -242,7 +242,7 @@ for i in range(2,21):
     #Your code here
     #Plot Results
     #Your code here
-
+    pass
 #Add Legend and Descriptive Title/Axis Labels
 #Your code here
 ```
